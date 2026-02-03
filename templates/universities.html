@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-head">
+  <div class="container">
+    <h1>University & Academic Partnerships</h1>
+    <p class="lead">
+      Structured placements and documentation support for supervised or credit-bearing internships.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ url_for('static', filename='pdf/InternshipsInBali_Universities_OnePage.pdf') }}">
+        Download One-Page PDF
+      </a>
+      <a class="btn btn-ghost" href="{{ url_for('apply') }}">Request Information</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Academic alignment</h2>
+    <p>
+      We support universities seeking reliable internship placements in Indonesia. Programs can be aligned with
+      credit-bearing internships, independent study requirements, or supervised experiential learning.
+    </p>
+
+    <h2>Program structure & supervision</h2>
+    <p>
+      Participants receive placement matching, a clear program timeline, local coordination, and check-ins during
+      the internship period. Universities may designate a faculty supervisor while we coordinate local support.
+    </p>
+
+    <h2>Documentation available</h2>
+    <ul class="bullets">
+      <li>Program overview and schedule</li>
+      <li>Placement confirmation letter</li>
+      <li>Learning-outcome summary (available on request)</li>
+      <li>Local supervisor or mentor details (where applicable)</li>
+      <li>End-of-program confirmation (participation / dates)</li>
+    </ul>
+
+    <h2>Locations & placement fields</h2>
+    <p>
+      Programs are offered in Bali and, based on field availability, in Lombok, Yogyakarta, and Jakarta. Placement
+      fields may include business and marketing, media and communications, hospitality and tourism, arts and design,
+      NGOs and community projects, education support, and sustainability / social impact.
+    </p>
+
+    <div class="callout">
+      <div>
+        <h3>University coordination</h3>
+        <p class="muted">
+          Email: <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br/>
+          Please include your institution name and desired program dates.
+        </p>
+      </div>
+      <a class="btn btn-primary" href="{{ url_for('apply') }}">Request Info</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
