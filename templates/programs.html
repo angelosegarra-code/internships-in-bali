@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-head">
+  <div class="container">
+    <h1>Internship Programs in Bali and Indonesia</h1>
+    <p class="lead">Choose a duration that fits your goals, timeline, and academic requirements.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <h3>1-Month Program</h3>
+        <p>Best for short-term exposure and cultural immersion.</p>
+        <ul class="bullets">
+          <li>Placement or project-based experience (subject to availability)</li>
+          <li>Cultural orientation</li>
+          <li>Visa guidance</li>
+          <li>Accommodation assistance</li>
+        </ul>
+        <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply for 1 Month</a>
+      </div>
+
+      <div class="card">
+        <h3>4-Month Program</h3>
+        <p>The standard internship format for academic and professional development.</p>
+        <ul class="bullets">
+          <li>Placement aligned with background and timing</li>
+          <li>Ongoing mentorship and support</li>
+          <li>Visa coordination</li>
+          <li>Accommodation options</li>
+          <li>Mid-program check-ins</li>
+        </ul>
+        <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply for 4 Months</a>
+      </div>
+
+      <div class="card">
+        <h3>6-Month Program</h3>
+        <p>Designed for deeper professional integration and long-term learning.</p>
+        <ul class="bullets">
+          <li>Extended placement and responsibilities (where available)</li>
+          <li>Cultural integration support</li>
+          <li>Visa and accommodation coordination</li>
+          <li>Final confirmation documentation (if required)</li>
+        </ul>
+        <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply for 6 Months</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2>Fields & placements</h2>
+    <p class="muted">Availability depends on timing, background, and location.</p>
+    <div class="grid2">
+      <ul class="bullets">
+        <li>Business & marketing</li>
+        <li>Media & communications</li>
+        <li>Hospitality & tourism</li>
+        <li>Arts & design</li>
+      </ul>
+      <ul class="bullets">
+        <li>NGOs & community projects</li>
+        <li>Education support</li>
+        <li>Sustainability & social impact</li>
+        <li>Other roles (case-by-case)</li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost" href="{{ url_for('apply') }}">Apply Now</a>
+  </div>
+</section>
+
+{% endblock %}
