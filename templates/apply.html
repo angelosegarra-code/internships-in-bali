@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-head">
+  <div class="container">
+    <h1>Apply for an Internship in Bali</h1>
+    <p class="lead">
+      Complete the application form below. Our team will review your information
+      and contact you regarding next steps.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <form class="form form-wide" method="post" action="{{ url_for('apply') }}">
+
+      <!-- BASIC INFORMATION -->
+      <h3>Personal Information</h3>
+
+      <div class="form-row">
+        <label>Full Name *</label>
+        <input type="text" name="full_name" required>
+      </div>
+
+      <div class="form-row">
+        <label>Email Address *</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-row">
+        <label>Nationality</label>
+        <input type="text" name="nationality">
+      </div>
+
+      <div class="form-row">
+        <label>Current Country of Residence</label>
+        <input type="text" name="residence_country">
+      </div>
+
+      <!-- BACKGROUND -->
+      <h3>Background</h3>
+
+      <div class="form-row">
+        <label>Current Status</label>
+        <select name="status">
+          <option value="">Select one</option>
+          <option value="student">University Student</option>
+          <option value="graduate">Recent Graduate</option>
+          <option value="gap_year">Gap Year</option>
+          <option value="career_change">Career Transition</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>University or Institution (if applicable)</label>
+        <input type="text" name="institution">
+      </div>
+
+      <div class="form-row">
+        <label>Field of Study or Professional Background</label>
+        <input type="text" name="background">
+      </div>
+
+      <!-- PROGRAM INTEREST -->
+      <h3>Program Preferences</h3>
+
+      <div class="form-row">
+        <label>Preferred Program Duration</label>
+        <select name="duration">
+          <option value="">Select duration</option>
+          <option value="1_month">1 Month</option>
+          <option value="4_months">4 Months</option>
+          <option value="6_months">6 Months</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Preferred Location(s)</label>
+        <input type="text" name="location">
+      </div>
+
+      <div class="form-row">
+        <label>Field(s) of Interest</label>
+        <input type="text" name="fields">
+      </div>
+
+      <!-- TIMING -->
+      <h3>Timing</h3>
+
+      <div class="form-row">
+        <label>Preferred Start Date</label>
+        <input type="date" name="start_date">
+      </div>
+
+      <div class="form-row">
+        <label>Are your dates flexible?</label>
+        <select name="flexible">
+          <option value="">Select one</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <!-- ACADEMIC REQUIREMENTS -->
+      <h3>Academic Requirements</h3>
+
+      <div class="form-row">
+        <label>Do you require documentation for academic credit?</label>
+        <select name="academic_credit">
+          <option value="">Select one</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <!-- ADDITIONAL -->
+      <h3>Additional Information</h3>
+
+      <div class="form-row">
+        <label>Additional notes or questions</label>
+        <textarea name="notes" rows="5"></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Submit Application
+      </button>
+
+      <p class="fineprint">
+        By submitting this form, you agree to be contacted regarding your application.
+      </p>
+
+    </form>
+  </div>
+</section>
+
+{% endblock %}
