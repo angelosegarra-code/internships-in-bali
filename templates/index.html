@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+  <div class="container">
+    <h1>Internships in Bali</h1>
+    <h2>Programs also available in other locations across Indonesia</h2>
+    <p class="lead">
+      Structured internship and cultural immersion programs for international students and universities.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply Now</a>
+      <a class="btn btn-ghost" href="{{ url_for('programs') }}">Explore Programs</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h3>A structured internship experience in Indonesia</h3>
+    <p>
+      We coordinate internship placements and practical support so participants can focus on learning,
+      contributing, and experiencing life in Indonesia.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h4>Placement matching</h4>
+        <p>We match applicants to placements based on background, timing, and availability.</p>
+      </div>
+      <div class="card">
+        <h4>Local coordination</h4>
+        <p>Clear timelines, orientation, and ongoing check-ins during your program.</p>
+      </div>
+      <div class="card">
+        <h4>Visa & accommodation guidance</h4>
+        <p>Support with preparation and options appropriate for your program length.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h3>Program locations</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Bali</h4>
+        <p>Creative industries, hospitality, media, NGOs, and wellness-related roles.</p>
+      </div>
+      <div class="card">
+        <h4>Lombok</h4>
+        <p>Community projects, sustainability initiatives, and education support.</p>
+      </div>
+      <div class="card">
+        <h4>Yogyakarta</h4>
+        <p>Arts, culture, design, education, and community-based placements.</p>
+      </div>
+      <div class="card">
+        <h4>Jakarta</h4>
+        <p>Business, startups, media, and corporate internship environments.</p>
+      </div>
+    </div>
+    <p class="fineprint">Location availability depends on field, timing, and placement openings.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h3>How it works</h3>
+    <ol class="steps">
+      <li><b>Apply</b> — share your background, dates, and interests.</li>
+      <li><b>Placement matching</b> — we align you with available roles.</li>
+      <li><b>Preparation</b> — timeline, guidance, and arrival details.</li>
+      <li><b>Arrival & start</b> — orientation, check-ins, and ongoing support.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container split">
+    <div>
+      <h3>Program durations</h3>
+      <ul class="bullets">
+        <li><b>1 Month</b> — short-term immersion and exposure.</li>
+        <li><b>4 Months</b> — standard internship experience.</li>
+        <li><b>6 Months</b> — extended professional integration.</li>
+      </ul>
+      <a class="btn btn-ghost" href="{{ url_for('programs') }}">View Programs</a>
+    </div>
+
+    <div>
+      <h3>For universities</h3>
+      <p>
+        We support supervised and credit-bearing internships with documentation available on request.
+      </p>
+      <a class="btn btn-ghost" href="{{ url_for('universities') }}">University Information</a>
+    </div>
+  </div>
+</section>
+
+<!-- Front-page signup (in addition to footer signup) -->
+<section class="section">
+  <div class="container">
+    <div class="callout">
+      <div>
+        <h3>Apply or request information</h3>
+        <p class="muted">Complete this short form and we’ll contact you with next steps.</p>
+      </div>
+
+      <form class="form form-inline" method="post" action="{{ url_for('apply') }}">
+        <input name="full_name" type="text" placeholder="Full name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <select name="duration">
+          <option value="1-month">1 Month</option>
+          <option value="4-months">4 Months</option>
+          <option value="6-months">6 Months</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
