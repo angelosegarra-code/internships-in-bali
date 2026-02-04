@@ -1,126 +1,84 @@
-{% extends "base.html" %}
-{% block content %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title or "Internships in Bali | InternshipsInBali.com" }}</title>
+  <meta name="description" content="{{ description or 'Structured internship and cultural immersion programs in Bali and across Indonesia.' }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+</head>
+<body>
 
-<section class="hero">
-  <div class="container">
-    <h1>Internships in Bali</h1>
-    <h2>Programs also available in other locations across Indonesia</h2>
-    <p class="lead">
-      Structured internship and cultural immersion programs for international students and universities.
-    </p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ url_for('home') }}">
+        <span class="brand-mark">■</span>
+        <span class="brand-text">InternshipsInBali</span>
+      </a>
 
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply Now</a>
-      <a class="btn btn-ghost" href="{{ url_for('programs') }}">Explore Programs</a>
-    </div>
-  </div>
-</section>
+      <nav class="nav">
+        <a href="{{ url_for('home') }}" class="{{ 'active' if active_page=='home' else '' }}">Home</a>
+        <a href="{{ url_for('programs') }}" class="{{ 'active' if active_page=='programs' else '' }}">Programs</a>
+        <a href="{{ url_for('universities') }}" class="{{ 'active' if active_page=='universities' else '' }}">Universities</a>
+        <a href="{{ url_for('apply') }}" class="{{ 'active' if active_page=='apply' else '' }}">Apply</a>
+        <a href="#contact" class="">Contact</a>
+      </nav>
 
-<section class="section">
-  <div class="container">
-    <h3>A structured internship experience in Indonesia</h3>
-    <p>
-      We coordinate internship placements and practical support so participants can focus on learning,
-      contributing, and experiencing life in Indonesia.
-    </p>
-
-    <div class="cards">
-      <div class="card">
-        <h4>Placement matching</h4>
-        <p>We match applicants to placements based on background, timing, and availability.</p>
-      </div>
-      <div class="card">
-        <h4>Local coordination</h4>
-        <p>Clear timelines, orientation, and ongoing check-ins during your program.</p>
-      </div>
-      <div class="card">
-        <h4>Visa & accommodation guidance</h4>
-        <p>Support with preparation and options appropriate for your program length.</p>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply Now</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section alt">
-  <div class="container">
-    <h3>Program locations</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>Bali</h4>
-        <p>Creative industries, hospitality, media, NGOs, and wellness-related roles.</p>
-      </div>
-      <div class="card">
-        <h4>Lombok</h4>
-        <p>Community projects, sustainability initiatives, and education support.</p>
-      </div>
-      <div class="card">
-        <h4>Yogyakarta</h4>
-        <p>Arts, culture, design, education, and community-based placements.</p>
-      </div>
-      <div class="card">
-        <h4>Jakarta</h4>
-        <p>Business, startups, media, and corporate internship environments.</p>
-      </div>
-    </div>
-    <p class="fineprint">Location availability depends on field, timing, and placement openings.</p>
-  </div>
-</section>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
 
-<section class="section">
-  <div class="container">
-    <h3>How it works</h3>
-    <ol class="steps">
-      <li><b>Apply</b> — share your background, dates, and interests.</li>
-      <li><b>Placement matching</b> — we align you with available roles.</li>
-      <li><b>Preparation</b> — timeline, guidance, and arrival details.</li>
-      <li><b>Arrival & start</b> — orientation, check-ins, and ongoing support.</li>
-    </ol>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container split">
-    <div>
-      <h3>Program durations</h3>
-      <ul class="bullets">
-        <li><b>1 Month</b> — short-term immersion and exposure.</li>
-        <li><b>4 Months</b> — standard internship experience.</li>
-        <li><b>6 Months</b> — extended professional integration.</li>
-      </ul>
-      <a class="btn btn-ghost" href="{{ url_for('programs') }}">View Programs</a>
-    </div>
-
-    <div>
-      <h3>For universities</h3>
-      <p>
-        We support supervised and credit-bearing internships with documentation available on request.
-      </p>
-      <a class="btn btn-ghost" href="{{ url_for('universities') }}">University Information</a>
-    </div>
-  </div>
-</section>
-
-<!-- Front-page signup (in addition to footer signup) -->
-<section class="section">
-  <div class="container">
-    <div class="callout">
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
       <div>
-        <h3>Apply or request information</h3>
-        <p class="muted">Complete this short form and we’ll contact you with next steps.</p>
+        <h4>InternshipsInBali.com</h4>
+        <p class="muted">
+          Internships in Bali — programs also available in other locations across Indonesia.
+        </p>
+        <p class="muted">
+          Email: <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br/>
+          Locations: Bali, Lombok, Yogyakarta, Jakarta
+        </p>
       </div>
 
-      <form class="form form-inline" method="post" action="{{ url_for('apply') }}">
-        <input name="full_name" type="text" placeholder="Full name" required />
-        <input name="email" type="email" placeholder="Email" required />
-        <select name="duration">
-          <option value="1-month">1 Month</option>
-          <option value="4-months">4 Months</option>
-          <option value="6-months">6 Months</option>
-        </select>
-        <button class="btn btn-primary" type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
-</section>
+      <div>
+        <h4>Sign up / Apply</h4>
+        <p class="muted">Submit your details and we’ll contact you with next steps.</p>
 
-{% endblock %}
+        <!-- Site-wide signup form (appears on every page) -->
+        <form class="form" method="post" action="{{ url_for('apply') }}">
+          <div class="form-row">
+            <label>Full name</label>
+            <input name="full_name" type="text" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input name="email" type="email" required />
+          </div>
+          <div class="form-row">
+            <label>Preferred duration</label>
+            <select name="duration">
+              <option value="1-month">1 Month</option>
+              <option value="4-months">4 Months</option>
+              <option value="6-months">6 Months</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <p class="fineprint">By submitting, you agree to be contacted about your application.</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span class="muted">© {{ year or "2026" }} InternshipsInBali.com</span>
+    </div>
+  </footer>
+
+</body>
+</html>
