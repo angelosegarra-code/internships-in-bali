@@ -1,280 +1,179 @@
-/* -----------------------------
-   Base
------------------------------ */
-* {
-  box-sizing: border-box;
+/* =========================
+   InternshipsInBali.com
+   Clean, university-friendly
+   ========================= */
+
+:root{
+  --text: #111;
+  --muted: #555;
+  --line: #e6e6e6;
+  --bg: #ffffff;
+  --soft: #fafafa;
+  --link: #0b57d0;
+  --link-hover: #063b8d;
+  --button: #111;
+  --button-text: #fff;
+  --radius: 12px;
 }
 
-body {
+*{ box-sizing: border-box; }
+
+html, body{
   margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #111;
   line-height: 1.6;
-  background: #fff;
 }
 
-a {
-  color: inherit;
+a{
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover{ color: var(--link-hover); text-decoration: underline; }
+
+img{ max-width: 100%; height: auto; }
+
+/* Layout */
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 18px;
+}
+
+/* Top bar / nav */
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 14px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+}
+
+nav a{
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+nav a:hover{
+  background: var(--soft);
   text-decoration: none;
 }
 
-h1, h2, h3, h4 {
-  margin-top: 0;
-  font-weight: 600;
+/* Headings */
+h1{
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 16px 0 10px;
+  letter-spacing: -0.02em;
 }
-
-p {
-  margin: 0 0 1em;
+h2{
+  font-size: 24px;
+  margin: 26px 0 10px;
+  letter-spacing: -0.01em;
 }
-
-/* -----------------------------
-   Layout
------------------------------ */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section {
-  padding: 70px 0;
-}
-
-.section.alt {
-  background: #fafafa;
-}
-
-.page-head {
-  padding: 80px 0 40px;
-  background: #f7f7f7;
-}
-
-/* -----------------------------
-   Header & Navigation
------------------------------ */
-.site-header {
-  border-bottom: 1px solid #eee;
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-}
-
-.brand-mark {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background: #111;
-  margin-right: 8px;
-}
-
-.nav a {
-  margin: 0 10px;
-  font-size: 14px;
-  padding: 6px 0;
-}
-
-.nav a.active {
-  border-bottom: 2px solid #111;
-}
-
-.nav-cta {
-  margin-left: 20px;
-}
-
-/* -----------------------------
-   Buttons
------------------------------ */
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: #111;
-  color: #fff;
-  border: none;
-}
-
-.btn-ghost {
-  border: 1px solid #111;
-  background: transparent;
-}
-
-.hero {
-  padding: 100px 0;
-  background: #f7f7f7;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero h2 {
-  font-size: 22px;
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-.lead {
+h3{
   font-size: 18px;
-  max-width: 700px;
+  margin: 20px 0 8px;
+}
+p{ margin: 0 0 14px; color: var(--text); }
+small, .muted{ color: var(--muted); }
+
+/* Hero block (works even without extra classes) */
+hr{
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 24px 0;
 }
 
-.hero-actions {
-  margin-top: 30px;
+/* Buttons (applies to links or buttons if you add class="btn") */
+.btn,
+button,
+input[type="submit"]{
+  display: inline-block;
+  background: var(--button);
+  color: var(--button-text);
+  border: 1px solid var(--button);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover,
+button:hover,
+input[type="submit"]:hover{
+  opacity: 0.92;
+  text-decoration: none;
 }
 
-/* -----------------------------
-   Cards & Grids
------------------------------ */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+/* Make any "Apply Now / Explore Programs" links look like buttons if they’re side-by-side */
+a.btn + a.btn{ margin-left: 10px; }
+
+/* Cards (auto-style sections if you wrap them later) */
+.card{
+  border: 1px solid var(--line);
+  background: var(--soft);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin: 18px 0;
 }
 
-.card {
-  padding: 20px;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  background: #fff;
+/* Lists */
+ul{
+  margin: 10px 0 18px 20px;
 }
+li{ margin: 6px 0; }
 
-.grid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-/* -----------------------------
-   Lists & Steps
------------------------------ */
-.bullets {
-  padding-left: 20px;
-}
-
-.steps {
-  padding-left: 20px;
-}
-
-.steps li {
-  margin-bottom: 10px;
-}
-
-/* -----------------------------
-   Forms
------------------------------ */
-.form {
+/* Form styling (works with plain inputs) */
+form{
+  margin: 14px 0 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
   max-width: 520px;
 }
 
-.form-wide {
-  max-width: 700px;
+label{
+  display: block;
+  font-weight: 650;
+  margin: 12px 0 6px;
 }
 
-.form-row {
-  margin-bottom: 15px;
-}
-
-.form input,
-.form select,
-.form textarea {
+input[type="text"],
+input[type="email"],
+select,
+textarea{
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.form textarea {
-  resize: vertical;
-}
-
-.form-inline {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.form-inline input,
-.form-inline select {
-  flex: 1;
-}
-
-.fineprint {
-  font-size: 12px;
-  color: #666;
-  margin-top: 10px;
-}
-
-/* -----------------------------
-   Callouts
------------------------------ */
-.callout {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  gap: 20px;
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
   background: #fff;
+  font-size: 16px;
 }
 
-/* -----------------------------
-   Footer
------------------------------ */
-.site-footer {
-  background: #111;
-  color: #fff;
-  padding: 60px 0;
+textarea{ min-height: 110px; }
+
+input:focus,
+select:focus,
+textarea:focus{
+  outline: 2px solid rgba(11,87,208,0.25);
+  border-color: rgba(11,87,208,0.55);
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.footer-bottom {
-  margin-top: 30px;
-  border-top: 1px solid #333;
-  padding-top: 20px;
-}
-
-.site-footer a {
-  color: #fff;
-}
-
-/* -----------------------------
-   Responsive
------------------------------ */
-@media (max-width: 768px) {
-  .grid2 {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
+/* Footer */
+footer{
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding: 18px;
+  color: var(--muted);
+  font-size: 14px;
 }
