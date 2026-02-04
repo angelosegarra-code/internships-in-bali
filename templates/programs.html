@@ -1,76 +1,170 @@
-{% extends "base.html" %}
-{% block content %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programs — Internships in Bali</title>
+  <meta name="description" content="Internship and cultural immersion programs in Bali, Lombok, Yogyakarta, and Jakarta for international students and universities." />
+  <link rel="stylesheet" href="static/css/site.css">
+</head>
 
-<section class="page-head">
-  <div class="container">
-    <h1>Internship Programs in Bali and Indonesia</h1>
-    <p class="lead">Choose a duration that fits your goals, timeline, and academic requirements.</p>
-  </div>
-</section>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">■</span>
+        <span class="brand-text">InternshipsInBali</span>
+      </a>
 
-<section class="section">
-  <div class="container">
-    <div class="cards">
-      <div class="card">
-        <h3>1-Month Program</h3>
-        <p>Best for short-term exposure and cultural immersion.</p>
-        <ul class="bullets">
-          <li>Placement or project-based experience (subject to availability)</li>
-          <li>Cultural orientation</li>
-          <li>Visa guidance</li>
-          <li>Accommodation assistance</li>
-        </ul>
-        <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply for 1 Month</a>
-      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="programs.html">Programs</a>
+        <a href="universities.html">Universities</a>
+        <a href="apply.html">Apply</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <div class="card">
-        <h3>4-Month Program</h3>
-        <p>The standard internship format for academic and professional development.</p>
-        <ul class="bullets">
-          <li>Placement aligned with background and timing</li>
-          <li>Ongoing mentorship and support</li>
-          <li>Visa coordination</li>
-          <li>Accommodation options</li>
-          <li>Mid-program check-ins</li>
-        </ul>
-        <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply for 4 Months</a>
-      </div>
-
-      <div class="card">
-        <h3>6-Month Program</h3>
-        <p>Designed for deeper professional integration and long-term learning.</p>
-        <ul class="bullets">
-          <li>Extended placement and responsibilities (where available)</li>
-          <li>Cultural integration support</li>
-          <li>Visa and accommodation coordination</li>
-          <li>Final confirmation documentation (if required)</li>
-        </ul>
-        <a class="btn btn-primary" href="{{ url_for('apply') }}">Apply for 6 Months</a>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="apply.html">Apply Now</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section alt">
-  <div class="container">
-    <h2>Fields & placements</h2>
-    <p class="muted">Availability depends on timing, background, and location.</p>
-    <div class="grid2">
-      <ul class="bullets">
-        <li>Business & marketing</li>
-        <li>Media & communications</li>
-        <li>Hospitality & tourism</li>
-        <li>Arts & design</li>
-      </ul>
-      <ul class="bullets">
-        <li>NGOs & community projects</li>
-        <li>Education support</li>
-        <li>Sustainability & social impact</li>
-        <li>Other roles (case-by-case)</li>
-      </ul>
+  <main class="container">
+    <section class="page-hero">
+      <h1>Programs</h1>
+      <p class="lead">
+        Choose a location and placement style. We handle matching, coordination, and practical support so students can focus on learning and contribution.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">1 Month</span>
+        <span class="pill">4 Months</span>
+        <span class="pill">6 Months</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <div class="card-head">
+          <h2>Bali</h2>
+          <span class="badge">Most Popular</span>
+        </div>
+        <p class="muted">Creative industries, hospitality, media, NGOs, and wellness-adjacent roles.</p>
+        <ul class="checklist">
+          <li>Creative studio / design support</li>
+          <li>Hospitality operations & guest experience</li>
+          <li>Media, content, and marketing assistance</li>
+          <li>NGO/community projects (varies by season)</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="apply.html">Apply for Bali</a>
+          <a class="btn" href="#included">What’s included</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>Lombok</h2>
+          <span class="badge badge-soft">Community</span>
+        </div>
+        <p class="muted">Community initiatives, sustainability projects, education support, local development.</p>
+        <ul class="checklist">
+          <li>Community projects & field support</li>
+          <li>Sustainability initiatives</li>
+          <li>Education/learning support roles</li>
+          <li>Local coordination & cultural immersion</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="apply.html">Apply for Lombok</a>
+          <a class="btn" href="#included">What’s included</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>Yogyakarta</h2>
+          <span class="badge badge-soft">Arts + Culture</span>
+        </div>
+        <p class="muted">Arts, culture, education, and small organizations in a student city.</p>
+        <ul class="checklist">
+          <li>Arts and cultural organizations</li>
+          <li>Education / learning environments</li>
+          <li>Community-based initiatives</li>
+          <li>Local language + culture exposure</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="apply.html">Apply for Yogyakarta</a>
+          <a class="btn" href="#included">What’s included</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>Jakarta</h2>
+          <span class="badge badge-soft">Business</span>
+        </div>
+        <p class="muted">Business, corporate exposure, startups, and professional environments (availability varies).</p>
+        <ul class="checklist">
+          <li>Startup / business support roles</li>
+          <li>Corporate & operations exposure</li>
+          <li>Professional communication practice</li>
+          <li>City logistics + guidance</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="apply.html">Apply for Jakarta</a>
+          <a class="btn" href="#included">What’s included</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="included" class="section">
+      <h2>What’s included</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Placement + coordination</h3>
+          <p class="muted">Matching based on background, timing, and availability, plus orientation and ongoing check-ins.</p>
+          <ul class="checklist">
+            <li>Placement matching + confirmation</li>
+            <li>Local orientation + timeline</li>
+            <li>On-program support + check-ins</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Practical guidance</h3>
+          <p class="muted">We’ll guide students through options for visa, accommodation, and arrival preparation.</p>
+          <ul class="checklist">
+            <li>Visa pathway guidance (program-dependent)</li>
+            <li>Accommodation options + recommendations</li>
+            <li>Arrival prep + local norms</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-band">
+        <div>
+          <h3>Ready to choose a location?</h3>
+          <p class="muted">Submit your details and we’ll reply with next steps and current placement availability.</p>
+        </div>
+        <a class="btn btn-primary" href="apply.html">Apply Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>InternshipsInBali.com</h4>
+        <p class="muted">Internships in Bali — programs also available in other locations across Indonesia.</p>
+        <p class="muted">
+          Email: <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br />
+          Locations: Bali, Lombok, Yogyakarta, Jakarta
+        </p>
+      </div>
+      <div class="muted">
+        © 2026 InternshipsInBali.com
+      </div>
     </div>
-    <a class="btn btn-ghost" href="{{ url_for('apply') }}">Apply Now</a>
-  </div>
-</section>
-
-{% endblock %}
+  </footer>
+</body>
+</html>
