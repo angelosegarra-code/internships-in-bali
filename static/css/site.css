@@ -142,11 +142,6 @@ p {
   );
 }
 
-.hero {
-  padding: 100px 0;
-  background: #f7f7f7;
-}
-
 .hero h1 {
   font-size: 48px;
 }
