@@ -355,3 +355,99 @@ textarea:focus{
   border-top: 1px solid var(--line);
   background: #fff;
 }
+/* ======================================================
+   HERO RESET & FIX — authoritative override
+   Paste at VERY BOTTOM of site.css
+====================================================== */
+
+/* HERO LAYOUT */
+.hero {
+  position: relative;
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background-image: url("/static/images/bali-sunrise-hero.jpg");
+  background-size: cover;
+  background-position: center 35%; /* show sky + palms */
+  background-repeat: no-repeat;
+}
+
+/* DARK OVERLAY (lighter + click-safe) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.15)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  color: #fff;
+}
+
+/* HEADLINE */
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+/* SUBTEXT */
+.hero .lead {
+  font-size: 18px;
+  opacity: 0.95;
+  margin-bottom: 26px;
+}
+
+/* CTA WRAPPER */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* BUTTON BASE */
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* GHOST BUTTON */
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,0.85);
+  color: #fff;
+  background: rgba(0,0,0,0.18);
+}
+
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+}
