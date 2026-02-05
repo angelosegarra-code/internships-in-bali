@@ -3,21 +3,26 @@
    Clean, university-friendly
    ========================= */
 
-:root{
+:root {
+  /* Core text + layout */
   --text: #111;
   --muted: #555;
   --line: #e6e6e6;
+  --radius: 12px;
 
-  /* subtle warm palette */
-  --paper: #fbfaf7;          /* warm off-white */
-  --gold-wash: #fbf4df;      /* very light gold */
-  --gold-accent: #b08d2a;    /* restrained gold accent */
+  /* Subtle warm palette */
+  --paper: #fbfaf7;                 /* warm off-white */
+  --gold-wash: rgba(215,180,120,0.18); /* soft ambient gold */
+  --gold-line: rgba(215,180,120,0.35);
+  --gold-accent: #b08d2a;            /* restrained gold accent */
+
+  /* Links */
   --link: #0b57d0;
   --link-hover: #063b8d;
 
+  /* Buttons */
   --button: #111;
   --button-text: #fff;
-  --radius: 12px;
 }
 
 *{ box-sizing: border-box; }
@@ -43,6 +48,20 @@ a{
 a:hover{ color: var(--link-hover); text-decoration: underline; }
 
 img{ max-width: 100%; height: auto; }
+
+.hero {
+  padding: 80px 20px 64px;
+  text-align: center;
+}
+
+.hero::after{
+  content:"";
+  display:block;
+  width: 120px;
+  height: 1px;
+  background: var(--gold-line);
+  margin: 36px auto 0;
+}
 
 /* Layout */
 .container{
@@ -128,13 +147,28 @@ a.btn + a.btn{ margin-left: 10px; }
 
 /* Cards (auto-style sections if you wrap them later) */
 .card{
+ .card {
+  background: rgba(255,255,255,0.85);
   border: 1px solid var(--line);
-  background: var(--soft);
-  border-radius: var(--radius);
-  padding: 18px;
-  margin: 18px 0;
+  border-radius: 14px;
+  padding: 28px;
+  margin: 48px 0;
 }
-
+   
+.card h2 {
+  margin-top: 0;
+}
+   
+.card--highlight {
+  background:
+    radial-gradient(
+      900px 300px at 50% 0%,
+      var(--gold-wash),
+      transparent 60%
+    ),
+    rgba(255,255,255,0.9);
+}
+   
 /* Lists */
 ul{
   margin: 10px 0 18px 20px;
