@@ -142,6 +142,26 @@ input[type="submit"]:hover{
   text-decoration: none;
 }
 
+/* Header CTA (quiet, secondary) */
+.site-header .btn {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+  font-weight: 500;
+}
+
+.site-header .btn:hover {
+  background: rgba(0, 0, 0, 0.03);
+  opacity: 1;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
 /* Make any "Apply Now / Explore Programs" links look like buttons if they’re side-by-side */
 a.btn + a.btn{ margin-left: 10px; }
 
@@ -240,6 +260,15 @@ textarea:focus{
 }
 .site-header {
   border-bottom: 1px solid var(--line);
+}
+
+   .brand {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.brand:hover {
+  text-decoration: none;
 }
 
 .header-inner {
