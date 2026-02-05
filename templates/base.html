@@ -63,36 +63,38 @@
         </p>
       </div>
 
-      <div>
-        <h4>Sign up / Apply</h4>
-        <p class="muted">Submit your details and we’ll contact you with next steps.</p>
+     <div class="container">
+  <div class="card card-highlight" style="max-width: 520px;">
+    <h4>Sign up / Apply</h4>
+    <p class="muted">Submit your details and we’ll contact you with next steps.</p>
 
-        <!-- Site-wide signup form (appears on every page) -->
-        <form class="form" method="post" action="{{ url_for('apply') }}">
-          <div class="form-row">
-            <label>Full name</label>
-            <input name="full_name" type="text" required />
-          </div>
-
-          <div class="form-row">
-            <label>Email</label>
-            <input name="email" type="email" required />
-          </div>
-
-          <div class="form-row">
-            <label>Preferred duration</label>
-            <select name="duration">
-              <option value="1-month">1 Month</option>
-              <option value="4-months">4 Months</option>
-              <option value="6-months">6 Months</option>
-            </select>
-          </div>
-
-          <button class="btn btn-primary" type="submit">Submit</button>
-          <p class="fineprint">By submitting, you agree to be contacted about your application.</p>
-        </form>
+    <form class="form" method="post" action="{{ url_for('apply') }}">
+      <div class="form-row">
+        <label>Full name</label>
+        <input name="full_name" type="text" required />
       </div>
 
+      <div class="form-row">
+        <label>Email</label>
+        <input name="email" type="email" required />
+      </div>
+
+      <div class="form-row">
+        <label>Preferred duration</label>
+        <select name="duration">
+          <option value="1-month">1 Month</option>
+          <option value="4-months">4 Months</option>
+          <option value="6-months">6 Months</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+      <p class="fineprint">
+        By submitting, you agree to be contacted about your application.
+      </p>
+    </form>
+  </div>
+</div>
     </div>
 
     <div class="container footer-bottom">
