@@ -1,48 +1,64 @@
+{# templates/base.html #}
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ title or "Internships in Bali | InternshipsInBali.com" }}</title>
-  <meta name="description" content="{{ description or 'Structured internship and cultural immersion programs in Bali and across Indonesia.' }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or "Internships in Bali" }}</title>
+  <meta name="description" content="{{ description or "Structured internship and cultural immersion programs in Bali and across Indonesia." }}" />
+  <link rel="stylesheet" href="/static/css/site.css" />
 </head>
+
 <body>
 
- <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-mark"></span>
-      <span class="brand-text">InternshipsInBali</span>
-    </a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ url_for('home') }}">
+        <span class="brand-mark">■</span>
+        <span class="brand-text">InternshipsInBali</span>
+      </a>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="programs.html">Programs</a>
-      <a href="universities.html">Universities</a>
-      <a href="apply.html">Apply</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav class="nav">
+        <a href="{{ url_for('home') }}"
+           class="{{ 'active' if active_page=='home' else '' }}">Home</a>
 
-    <div class="nav-cta">
-      <a class="btn btn-header" href="apply.html">Apply</a>
+        <a href="{{ url_for('programs') }}"
+           class="{{ 'active' if active_page=='programs' else '' }}">Programs</a>
+
+        <a href="{{ url_for('universities') }}"
+           class="{{ 'active' if active_page=='universities' else '' }}">Universities</a>
+
+        <a href="{{ url_for('apply') }}"
+           class="{{ 'active' if active_page=='apply' else '' }}">Apply</a>
+
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Understated header CTA (you can remove this whole div if you want only one Apply button) -->
+      <div class="nav-cta">
+        <a class="btn" href="{{ url_for('apply') }}">Apply Now</a>
+      </div>
     </div>
-  </div>
-</header>
-  
+  </header>
+
+  <!-- Main -->
   <main>
     {% block content %}{% endblock %}
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer" id="contact">
     <div class="container footer-grid">
+
       <div>
         <h4>InternshipsInBali.com</h4>
         <p class="muted">
           Internships in Bali — programs also available in other locations across Indonesia.
         </p>
         <p class="muted">
-          Email: <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br/>
+          Email:
+          <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br />
           Locations: Bali, Lombok, Yogyakarta, Jakarta
         </p>
       </div>
@@ -57,10 +73,12 @@
             <label>Full name</label>
             <input name="full_name" type="text" required />
           </div>
+
           <div class="form-row">
             <label>Email</label>
             <input name="email" type="email" required />
           </div>
+
           <div class="form-row">
             <label>Preferred duration</label>
             <select name="duration">
@@ -69,10 +87,12 @@
               <option value="6-months">6 Months</option>
             </select>
           </div>
+
           <button class="btn btn-primary" type="submit">Submit</button>
           <p class="fineprint">By submitting, you agree to be contacted about your application.</p>
         </form>
       </div>
+
     </div>
 
     <div class="container footer-bottom">
