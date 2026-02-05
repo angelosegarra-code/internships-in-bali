@@ -451,3 +451,104 @@ textarea:focus{
     font-size: 36px;
   }
 }
+/* ======================================================
+   HERO – FINAL FIX (Homepage)
+   ====================================================== */
+
+.hero {
+  position: relative;
+  min-height: 68vh;
+
+  background-image: url("/static/images/bali-sunrise-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* show sky + palms, not just rice */
+  background-position: center 25%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* lighter cinematic overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.28),
+    rgba(0,0,0,0.12)
+  );
+}
+
+/* remove container bias + center everything */
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+/* headline */
+.hero h1 {
+  font-size: clamp(38px, 4.8vw, 58px);
+  margin-bottom: 14px;
+  color: #ffffff;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.45);
+}
+
+/* subtext */
+.hero .lead {
+  font-size: 18px;
+  max-width: 720px;
+  margin: 0 auto 28px;
+  color: #f2f2f2;
+}
+
+/* buttons wrapper */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* primary button */
+.hero .btn-primary {
+  background: #ffffff;
+  color: #111;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* explore button – now a REAL button */
+.hero .btn-ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.7);
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.hero .btn-ghost:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* mobile tuning */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 72vh;
+    background-position: center 20%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}
