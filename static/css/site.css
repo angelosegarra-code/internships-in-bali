@@ -472,7 +472,7 @@ p{ margin: 0 0 1em; }
    ============================= */
 
 .hero-universities{
-  background-image: url("/static/images/bali-universities-hero.jpg");
+  background-image: url("/static/images/universities-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 40%;
