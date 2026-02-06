@@ -532,3 +532,31 @@ body.universities .hero > *{
   position: relative;
   z-index: 1;
 }
+/* =========================
+   APPLY PAGE HERO OVERRIDE
+   ========================= */
+
+.page-head.apply-hero{
+  background-image: url("/static/images/apply-hero.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center 45% !important;
+  color: #fff;
+  position: relative;
+}
+
+/* overlay for readability */
+.page-head.apply-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.18)
+  );
+}
+
+.page-head.apply-hero .container{
+  position:relative;
+  z-index:1;
+}
