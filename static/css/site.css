@@ -477,3 +477,34 @@ p{ margin: 0 0 1em; }
   background-repeat: no-repeat;
   background-position: center 40%;
 }
+/* ============================
+   UNIVERSITIES HERO OVERRIDE
+   ============================ */
+
+/* Make sure the hero has height */
+body.universities .hero{
+  min-height: 64vh;            /* or 70vh if you want bigger */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background-image: url("/static/images/universities-hero.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center 35% !important;
+}
+
+/* Keep overlay consistent (if your .hero::before exists) */
+body.universities .hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.18));
+}
+
+/* Keep text above overlay */
+body.universities .hero > *{
+  position: relative;
+  z-index: 1;
+}
