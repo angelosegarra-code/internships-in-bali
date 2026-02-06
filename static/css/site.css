@@ -560,3 +560,10 @@ body.universities .hero > *{
   position:relative;
   z-index:1;
 }
+/* APPLY HERO IMAGE */
+.apply-hero{
+  background-image: url("/static/images/apply-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 45%;
+}
