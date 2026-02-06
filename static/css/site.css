@@ -478,3 +478,40 @@ p {
 .page-head .btn {
   display: inline-block;
 }
+/* ------------------------------------
+   PROGRAMS PAGE — FINAL HERO FIX
+------------------------------------ */
+
+/* Remove oversized left-floating "Programs" label effect */
+.page-head h1 {
+  position: relative;
+  left: 0;
+  transform: none;
+  opacity: 1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+/* Ensure Programs hero text is perfectly centered */
+.page-head {
+  text-align: center;
+}
+
+/* Tighten spacing so heading + paragraph feel unified */
+.page-head h1 {
+  margin-bottom: 10px;
+}
+
+.page-head p,
+.page-head .lead {
+  margin-top: 0;
+}
+
+/* Optional: slightly soften contrast so image breathes */
+.page-head::before {
+  background: linear-gradient(
+    rgba(0,0,0,0.30),
+    rgba(0,0,0,0.15)
+  );
+}
