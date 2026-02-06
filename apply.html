@@ -1,138 +1,191 @@
-{% extends "base.html" %}
-{% block content %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apply — Internships in Bali</title>
+  <meta name="description" content="Apply for an internship or immersion program in Bali and across Indonesia." />
+  <link rel="stylesheet" href="/static/css/site.css">
+</head>
 
-<section class="page-head apply-hero">
-  <div class="container">
-    <h1>Apply for an Internship in Bali</h1>
-    <p class="lead">
-      Complete the application form below. Our team will review your information
-      and contact you regarding next steps.
-    </p>
-  </div>
-</section>
+<body class="apply">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">■</span>
+        <span class="brand-text">InternshipsInBali</span>
+      </a>
 
-<section class="section">
-  <div class="container">
-    <form class="form form-wide" method="post" action="{{ url_for('apply') }}">
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="universities.html">Universities</a>
+        <a class="active" href="apply.html">Apply</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <!-- BASIC INFORMATION -->
-      <h3>Personal Information</h3>
-
-      <div class="form-row">
-        <label>Full Name *</label>
-        <input type="text" name="full_name" required>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="apply.html">Apply Now</a>
       </div>
+    </div>
+  </header>
 
-      <div class="form-row">
-        <label>Email Address *</label>
-        <input type="email" name="email" required>
-      </div>
-
-      <div class="form-row">
-        <label>Nationality</label>
-        <input type="text" name="nationality">
-      </div>
-
-      <div class="form-row">
-        <label>Current Country of Residence</label>
-        <input type="text" name="residence_country">
-      </div>
-
-      <!-- BACKGROUND -->
-      <h3>Background</h3>
-
-      <div class="form-row">
-        <label>Current Status</label>
-        <select name="status">
-          <option value="">Select one</option>
-          <option value="student">University Student</option>
-          <option value="graduate">Recent Graduate</option>
-          <option value="gap_year">Gap Year</option>
-          <option value="career_change">Career Transition</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-
-      <div class="form-row">
-        <label>University or Institution (if applicable)</label>
-        <input type="text" name="institution">
-      </div>
-
-      <div class="form-row">
-        <label>Field of Study or Professional Background</label>
-        <input type="text" name="background">
-      </div>
-
-      <!-- PROGRAM INTEREST -->
-      <h3>Program Preferences</h3>
-
-      <div class="form-row">
-        <label>Preferred Program Duration</label>
-        <select name="duration">
-          <option value="">Select duration</option>
-          <option value="1_month">1 Month</option>
-          <option value="4_months">4 Months</option>
-          <option value="6_months">6 Months</option>
-        </select>
-      </div>
-
-      <div class="form-row">
-        <label>Preferred Location(s)</label>
-        <input type="text" name="location">
-      </div>
-
-      <div class="form-row">
-        <label>Field(s) of Interest</label>
-        <input type="text" name="fields">
-      </div>
-
-      <!-- TIMING -->
-      <h3>Timing</h3>
-
-      <div class="form-row">
-        <label>Preferred Start Date</label>
-        <input type="date" name="start_date">
-      </div>
-
-      <div class="form-row">
-        <label>Are your dates flexible?</label>
-        <select name="flexible">
-          <option value="">Select one</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </div>
-
-      <!-- ACADEMIC REQUIREMENTS -->
-      <h3>Academic Requirements</h3>
-
-      <div class="form-row">
-        <label>Do you require documentation for academic credit?</label>
-        <select name="academic_credit">
-          <option value="">Select one</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </div>
-
-      <!-- ADDITIONAL -->
-      <h3>Additional Information</h3>
-
-      <div class="form-row">
-        <label>Additional notes or questions</label>
-        <textarea name="notes" rows="5"></textarea>
-      </div>
-
-      <button class="btn btn-primary" type="submit">
-        Submit Application
-      </button>
-
-      <p class="fineprint">
-        By submitting this form, you agree to be contacted regarding your application.
+  <!-- HERO -->
+  <section class="page-head apply-hero">
+    <div class="container">
+      <h1>Apply for an Internship in Bali</h1>
+      <p class="lead">
+        Complete the application form below. Our team will review your information and contact you regarding next steps.
       </p>
+    </div>
+  </section>
 
-    </form>
-  </div>
-</section>
+  <main class="container">
+    <section class="card">
+      <h2 style="margin-top:0;">Application Form</h2>
 
-{% endblock %}
+      <!-- Static form placeholder. Connect later (Formspree/Tally/etc). -->
+      <form class="form form-wide" method="post" action="#">
+        <!-- BASIC INFORMATION -->
+        <h3>Personal Information</h3>
+
+        <div class="form-row">
+          <label>Full Name *</label>
+          <input type="text" name="full_name" required>
+        </div>
+
+        <div class="form-row">
+          <label>Email Address *</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+          <label>Nationality</label>
+          <input type="text" name="nationality">
+        </div>
+
+        <div class="form-row">
+          <label>Current Country of Residence</label>
+          <input type="text" name="residence_country">
+        </div>
+
+        <!-- BACKGROUND -->
+        <h3>Background</h3>
+
+        <div class="form-row">
+          <label>Current Status</label>
+          <select name="status">
+            <option value="">Select one</option>
+            <option value="student">University Student</option>
+            <option value="graduate">Recent Graduate</option>
+            <option value="gap_year">Gap Year</option>
+            <option value="career_change">Career Transition</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>University or Institution (if applicable)</label>
+          <input type="text" name="institution">
+        </div>
+
+        <div class="form-row">
+          <label>Field of Study or Professional Background</label>
+          <input type="text" name="background">
+        </div>
+
+        <!-- PROGRAM INTEREST -->
+        <h3>Program Preferences</h3>
+
+        <div class="form-row">
+          <label>Preferred Program Duration</label>
+          <select name="duration">
+            <option value="">Select duration</option>
+            <option value="1_month">1 Month</option>
+            <option value="4_months">4 Months</option>
+            <option value="6_months">6 Months</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Preferred Location(s)</label>
+          <input type="text" name="location" placeholder="Bali, Lombok, Yogyakarta, Jakarta">
+        </div>
+
+        <div class="form-row">
+          <label>Field(s) of Interest</label>
+          <input type="text" name="fields" placeholder="Hospitality, NGO, media, education, etc.">
+        </div>
+
+        <!-- TIMING -->
+        <h3>Timing</h3>
+
+        <div class="form-row">
+          <label>Preferred Start Date</label>
+          <input type="date" name="start_date">
+        </div>
+
+        <div class="form-row">
+          <label>Are your dates flexible?</label>
+          <select name="flexible">
+            <option value="">Select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <!-- ACADEMIC REQUIREMENTS -->
+        <h3>Academic Requirements</h3>
+
+        <div class="form-row">
+          <label>Do you require documentation for academic credit?</label>
+          <select name="academic_credit">
+            <option value="">Select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <!-- ADDITIONAL -->
+        <h3>Additional Information</h3>
+
+        <div class="form-row">
+          <label>Additional notes or questions</label>
+          <textarea name="notes" rows="5"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit Application</button>
+        <p class="muted" style="margin-top:10px;">
+          By submitting this form, you agree to be contacted regarding your application.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>InternshipsInBali.com</h4>
+        <p class="muted">Internships in Bali — programs also available in other locations across Indonesia.</p>
+        <p class="muted">
+          Email: <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br/>
+          Locations: Bali, Lombok, Yogyakarta, Jakarta
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick links</h4>
+        <p class="muted">
+          <a href="programs.html">Programs</a><br/>
+          <a href="universities.html">Universities</a><br/>
+          <a href="apply.html">Apply</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top: 12px;">
+      <p class="muted">© 2026 InternshipsInBali.com</p>
+    </div>
+  </footer>
+</body>
+</html>
