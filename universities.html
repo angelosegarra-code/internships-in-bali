@@ -1,63 +1,155 @@
-{% extends "base.html" %}
-{% block content %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Universities — Internships in Bali</title>
+  <meta name="description" content="Structured placements and documentation support for supervised or credit-bearing internships in Bali and across Indonesia." />
+  <link rel="stylesheet" href="/static/css/site.css">
+</head>
 
-<section class="page-head">
-  <div class="container">
-    <h1>University & Academic Partnerships</h1>
-    <p class="lead">
-      Structured placements and documentation support for supervised or credit-bearing internships.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ url_for('static', filename='pdf/InternshipsInBali_Universities_OnePage.pdf') }}">
-        Download One-Page PDF
+<body class="universities">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">■</span>
+        <span class="brand-text">InternshipsInBali</span>
       </a>
-      <a class="btn btn-ghost" href="{{ url_for('apply') }}">Request Information</a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a class="active" href="universities.html">Universities</a>
+        <a href="apply.html">Apply</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="apply.html">Apply Now</a>
+      </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section">
-  <div class="container">
-    <h2>Academic alignment</h2>
-    <p>
-      We support universities seeking reliable internship placements in Indonesia. Programs can be aligned with
-      credit-bearing internships, independent study requirements, or supervised experiential learning.
-    </p>
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero universities-hero">
+      <div class="hero-content">
+        <h1>University & Academic Partnerships</h1>
+        <p class="lead">
+          Structured placements and documentation support for supervised or credit-bearing internships
+          in Bali and across Indonesia.
+        </p>
 
-    <h2>Program structure & supervision</h2>
-    <p>
-      Participants receive placement matching, a clear program timeline, local coordination, and check-ins during
-      the internship period. Universities may designate a faculty supervisor while we coordinate local support.
-    </p>
+        <div class="hero-actions">
+          <!-- Update this href to your real PDF path -->
+          <a class="btn btn-primary" href="/static/docs/internships-in-bali-universities-one-page.pdf" target="_blank" rel="noopener">
+            Download One-Page PDF
+          </a>
+          <a class="btn btn-ghost" href="#request">Request Information</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Documentation available</h2>
-    <ul class="bullets">
-      <li>Program overview and schedule</li>
-      <li>Placement confirmation letter</li>
-      <li>Learning-outcome summary (available on request)</li>
-      <li>Local supervisor or mentor details (where applicable)</li>
-      <li>End-of-program confirmation (participation / dates)</li>
-    </ul>
+    <!-- Main content -->
+    <section class="card" style="margin-top: 18px;">
+      <h2 style="margin-top:0;">Academic alignment</h2>
+      <p class="muted">
+        We support universities seeking reliable internship placements in Indonesia. Programs can be aligned
+        with supervision requirements, academic calendars, and credit-bearing formats.
+      </p>
+    </section>
 
-    <h2>Locations & placement fields</h2>
-    <p>
-      Programs are offered in Bali and, based on field availability, in Lombok, Yogyakarta, and Jakarta. Placement
-      fields may include business and marketing, media and communications, hospitality and tourism, arts and design,
-      NGOs and community projects, education support, and sustainability / social impact.
-    </p>
+    <section class="card">
+      <h2 style="margin-top:0;">Program structure & supervision</h2>
+      <p class="muted">
+        Participants receive placement matching, a clear program timeline, local coordination, and check-ins
+        during the internship period. Where required, we can provide coordination support for supervision and reporting.
+      </p>
+    </section>
 
-    <div class="callout">
+    <section class="card">
+      <h2 style="margin-top:0;">Documentation available</h2>
+      <ul class="bullets">
+        <li>Program overview and schedule</li>
+        <li>Placement confirmation letter</li>
+        <li>Learning-outcome summary (available on request)</li>
+        <li>Local supervisor or mentor details (where applicable)</li>
+        <li>End-of-program confirmation (participation / dates)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 style="margin-top:0;">Locations & placement fields</h2>
+      <p class="muted">
+        Programs are offered in Bali and, based on field availability, in Lombok, Yogyakarta, and Jakarta.
+        Placement fields may include NGOs and community projects, education support, hospitality, creative industries,
+        media, sustainability, and social impact.
+      </p>
+    </section>
+
+    <section class="card" id="request">
+      <h2 style="margin-top:0;">University coordination</h2>
+      <p class="muted">
+        Email: <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br/>
+        Please include your institution name, intended placement field(s), and desired program dates.
+      </p>
+
+      <div class="hero-actions" style="margin-top: 14px;">
+        <a class="btn btn-primary" href="mailto:info@internshipsinbali.com?subject=University%20Partnership%20Request%20—%20InternshipsInBali">
+          Email Us
+        </a>
+        <a class="btn" href="/static/docs/internships-in-bali-universities-one-page.pdf" target="_blank" rel="noopener">
+          View One-Page PDF
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
       <div>
-        <h3>University coordination</h3>
+        <h4>InternshipsInBali.com</h4>
+        <p class="muted">Internships in Bali — programs also available in other locations across Indonesia.</p>
         <p class="muted">
           Email: <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br/>
-          Please include your institution name and desired program dates.
+          Locations: Bali, Lombok, Yogyakarta, Jakarta
         </p>
       </div>
-      <a class="btn btn-primary" href="{{ url_for('apply') }}">Request Info</a>
-    </div>
-  </div>
-</section>
 
-{% endblock %}
+      <div>
+        <h4>Sign up / Apply</h4>
+        <p class="muted">Submit your details and we’ll contact you with next steps.</p>
+
+        <form class="form" action="#" method="post">
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="Your name" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@email.com" />
+          </label>
+
+          <label>
+            I am a…
+            <select name="type">
+              <option>University coordinator</option>
+              <option>Faculty / supervisor</option>
+              <option>Student services / careers office</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <p class="muted" style="margin-top:10px;">By submitting, you agree to be contacted about this request.</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top: 12px;">
+      <p class="muted">© 2026 InternshipsInBali.com</p>
+    </div>
+  </footer>
+</body>
+</html>
