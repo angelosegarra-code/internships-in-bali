@@ -456,28 +456,14 @@ p{ margin: 0 0 1em; }
     justify-content: flex-start;
   }
 }
-/* ================================
-   PROGRAMS PAGE — HERO IMAGE
-   ================================ */
 
-/* Use a different hero image on Programs page */
-body.programs .hero {
+/* =============================
+   PROGRAMS HERO IMAGE
+   ============================= */
+
+.hero-programs {
   background-image: url("/static/images/bali-programs-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 35%;
-}
-
-/* Keep Programs hero text centered and clean */
-body.programs .hero-content,
-body.programs .hero {
-  text-align: center;
-}
-
-/* Slightly lighter overlay for Programs */
-body.programs .hero::before {
-  background: linear-gradient(
-    rgba(0,0,0,0.30),
-    rgba(0,0,0,0.15)
-  );
+  background-position: center 40%;
 }
