@@ -508,3 +508,27 @@ body.universities .hero > *{
   position: relative;
   z-index: 1;
 }
+/* APPLY PAGE HERO */
+.apply-hero {
+  background-image: url("/static/images/apply-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  color: #fff;
+  position: relative;
+}
+
+.apply-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.20)
+  );
+}
+
+.apply-hero .container {
+  position: relative;
+  z-index: 1;
+}
