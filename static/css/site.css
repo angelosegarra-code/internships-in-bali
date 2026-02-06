@@ -467,3 +467,13 @@ p{ margin: 0 0 1em; }
   background-repeat: no-repeat;
   background-position: center 40%;
 }
+/* =============================
+   UNIVERSITIES HERO IMAGE
+   ============================= */
+
+.hero-universities{
+  background-image: url("/static/images/bali-universities-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+}
