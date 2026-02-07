@@ -19,8 +19,8 @@
   --dark: #111;
   --white: #fff;
 
-  --hero-img: url("/static/images/bali-sunrise-hero.jpg");
-
+  --hero-img: url("../images/bali-sunrise-hero.jpg");
+   
   /* overlay strength */
   --overlay-top: rgba(0,0,0,0.30);
   --overlay-bot: rgba(0,0,0,0.14);
