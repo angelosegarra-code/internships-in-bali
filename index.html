@@ -1,97 +1,185 @@
+<!-- FILE: index.html
+     Static HTML homepage for Internships in Bali
+     Replace the links (program-overview.html, universities.html, apply.html) with your real filenames/paths.
+-->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Internships in Bali</title>
-  <meta name="description" content="{{ description or 'Structured internship and cultural immersion programs in Bali and across Indonesia.' }}" />
-  <link rel="stylesheet" href="/static/css/site.css">
+  <meta name="description" content="Structured, longer-term cultural internships in Indonesia for students and recent graduates seeking cultural immersion and real-world experience." />
+
+  <!-- CSS: adjust path if your css folder is different -->
+  <link rel="stylesheet" href="static/css/internships.css" />
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">■</span>
-        <span class="brand-text">InternshipsInBali</span>
-      </a>
+  <main class="iib-home">
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="programs.html">Programs</a>
-        <a href="universities.html">Universities</a>
-        <a href="apply.html">Apply</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <!-- HERO / ABOVE THE FOLD -->
+    <section class="iib-hero">
+      <div class="iib-container iib-hero__inner">
+        <h1 class="iib-hero__title">Cultural Internship Programs in Bali</h1>
 
-     <div class="nav-cta">
-        <a class="btn btn-primary" href="apply.html">Apply Now</a>
-     </div>
-  </header>
-
-  <main>
-  <section class="hero">
-  <div class="hero-content container">
-    <h1>Internships in Bali</h1>
-
-    <p class="lead">
-      Structured internship and cultural immersion programs for international
-      students and universities across Indonesia.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn btn-ghost" href="programs.html">Explore Programs</a>
-    </div>
-  </div>
-</section>
-    
- </main>
-
-  <footer class="site-footer" id="contact">
-    <div class="container footer-grid">
-      <div>
-        <h4>InternshipsInBali.com</h4>
-        <p class="muted">
-          Internships in Bali — programs also available in other locations across Indonesia.
+        <p class="iib-hero__subtitle">
+          Structured, longer-term internships in Indonesia for students and recent graduates seeking cultural immersion and real-world experience.
         </p>
-        <p class="muted">
-          Email: <a href="mailto:info@internshipsinbali.com">info@internshipsinbali.com</a><br/>
-          Locations: Bali, Lombok, Yogyakarta, Jakarta
+
+        <p class="iib-hero__lead">
+          Internships in Bali offers carefully designed placements ranging from one to six months, combining local mentorship,
+          cultural or creative engagement, and guided reflection. The programs are intended as a complement to academic study,
+          supporting cultural literacy, adaptability, and independent learning through lived experience.
+        </p>
+
+        <div class="iib-hero__cta">
+          <a class="iib-btn iib-btn--primary" href="program-overview.html">Program Overview</a>
+          <a class="iib-btn iib-btn--secondary" href="universities.html">For Universities</a>
+        </div>
+
+        <p class="iib-hero__micro">
+          Programs available in Bali, Lombok, Yogyakarta, and Jakarta.
         </p>
       </div>
+    </section>
 
-      <div>
-        <h4>Sign up / Apply</h4>
-        <p class="muted">Submit your details and we’ll contact you with next steps.</p>
+    <!-- PROGRAM OVERVIEW (HOMEPAGE PREVIEW) -->
+    <section class="iib-section">
+      <div class="iib-container">
+        <h2 class="iib-h2">Program Overview</h2>
 
-        <!-- Site-wide signup form (appears on every page) -->
-        <form class="form" method="post" action="{{ url_for('apply') }}">
-          <div class="form-row">
-            <label>Full name</label>
-            <input name="full_name" type="text" required />
-          </div>
-          <div class="form-row">
-            <label>Email</label>
-            <input name="email" type="email" required />
-          </div>
-          <div class="form-row">
-            <label>Preferred duration</label>
-            <select name="duration">
-              <option value="1-month">1 Month</option>
-              <option value="4-months">4 Months</option>
-              <option value="6-months">6 Months</option>
-            </select>
-          </div>
-          <button class="btn btn-primary" type="submit">Submit</button>
-          <p class="fineprint">By submitting, you agree to be contacted about your application.</p>
-        </form>
+        <p class="iib-p">
+          Internships in Bali offers structured cultural internship programs in Indonesia for students and recent graduates seeking longer-term immersion
+          beyond short placements or volunteer tourism.
+        </p>
+
+        <p class="iib-p">
+          Programs range from <strong>one to six months</strong> and are built around three core elements:
+        </p>
+
+        <div class="iib-cards">
+          <article class="iib-card">
+            <h3 class="iib-h3">Local Mentorship</h3>
+            <p class="iib-p">
+              Participants are placed with local hosts or organizations aligned with their interests, emphasizing observation, participation,
+              and gradual responsibility.
+            </p>
+          </article>
+
+          <article class="iib-card">
+            <h3 class="iib-h3">Cultural &amp; Creative Engagement</h3>
+            <p class="iib-p">
+              Internships focus on meaningful involvement within local contexts, including creative, cultural, or community-based initiatives shaped by place and relationship.
+            </p>
+          </article>
+
+          <article class="iib-card">
+            <h3 class="iib-h3">Guided Reflection</h3>
+            <p class="iib-p">
+              Light, intentional reflection supports participants in integrating cultural learning, experience, and personal development throughout the program.
+            </p>
+          </article>
+        </div>
+
+        <div class="iib-meta">
+          <p class="iib-meta__line"><strong>Locations:</strong> Bali (primary), Lombok, Yogyakarta, Jakarta</p>
+          <p class="iib-meta__line"><strong>Duration:</strong> 1, 4, or 6 months</p>
+        </div>
+
+        <div class="iib-actions">
+          <a class="iib-btn iib-btn--primary" href="program-overview.html">Read Full Program Overview</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container footer-bottom">
-      <span class="muted">© 2026 InternshipsInBali.com
-    </div>
-  </footer>
+    <!-- WHO THESE PROGRAMS ARE FOR -->
+    <section class="iib-section iib-section--alt">
+      <div class="iib-container">
+        <h2 class="iib-h2">Who These Programs Are For</h2>
+
+        <p class="iib-p">
+          These programs are designed for individuals and institutions seeking <strong>depth over speed</strong>.
+        </p>
+
+        <ul class="iib-list">
+          <li>University students or recent graduates</li>
+          <li>Individuals seeking extended cultural immersion</li>
+          <li>Participants comfortable with independence and learning through experience</li>
+          <li>Those interested in meaningful engagement rather than transactional internships</li>
+        </ul>
+
+        <p class="iib-p">
+          Placements are selective and intentionally paced.
+        </p>
+      </div>
+    </section>
+
+    <!-- TWO PATHWAYS -->
+    <section class="iib-section">
+      <div class="iib-container">
+        <h2 class="iib-h2">Two Ways to Engage</h2>
+
+        <div class="iib-split">
+          <div class="iib-split__panel">
+            <h3 class="iib-h3">For Universities</h3>
+            <p class="iib-p">
+              For institutions seeking international internship pathways that emphasize cultural literacy, adaptability, and experiential learning.
+            </p>
+            <a class="iib-btn iib-btn--secondary" href="universities.html">For Universities</a>
+          </div>
+
+          <div class="iib-split__panel">
+            <h3 class="iib-h3">For Individuals</h3>
+            <p class="iib-p">
+              For students or graduates interested in applying directly for a longer-term cultural internship experience in Indonesia.
+            </p>
+            <a class="iib-btn iib-btn--primary" href="apply.html">Apply for an Internship</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS SNAPSHOT -->
+    <section class="iib-section iib-section--alt">
+      <div class="iib-container">
+        <h2 class="iib-h2">Program Locations</h2>
+
+        <div class="iib-locations">
+          <div class="iib-location">
+            <h3 class="iib-h3">Bali</h3>
+            <p class="iib-p">Primary location, with a wide range of cultural and creative placements.</p>
+          </div>
+
+          <div class="iib-location">
+            <h3 class="iib-h3">Lombok</h3>
+            <p class="iib-p">Community-based and locally embedded experiences.</p>
+          </div>
+
+          <div class="iib-location">
+            <h3 class="iib-h3">Yogyakarta</h3>
+            <p class="iib-p">Cultural, educational, and arts-oriented contexts.</p>
+          </div>
+
+          <div class="iib-location">
+            <h3 class="iib-h3">Jakarta</h3>
+            <p class="iib-p">Urban, organizational, and institutional settings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="iib-section">
+      <div class="iib-container">
+        <p class="iib-p iib-closing">
+          Internships in Bali is intentionally small and selective. Programs prioritize meaningful engagement, cultural respect,
+          and long-term learning over short-term outcomes. If you’re interested in learning more, we invite you to explore the pathways above or begin a conversation.
+        </p>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
