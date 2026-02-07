@@ -617,3 +617,25 @@ body.universities .hero > *{
   .iib-locations{grid-template-columns:1fr;}
   .iib-hero__title{font-size:34px;}
 }
+/* =========================================================
+   IIB HERO BACKGROUND (activate hero image)
+   ========================================================= */
+
+.iib-hero{
+  position: relative;
+  background-image: var(--hero-img);
+  background-size: cover;
+  background-position: center;
+}
+
+/* light overlay so the text stays readable */
+.iib-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(255,255,255,0.78);
+}
+
+.iib-hero__inner{
+  position: relative;
+}
