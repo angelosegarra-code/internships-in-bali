@@ -699,3 +699,24 @@ body.universities .hero > *{
   .iib-nav__inner{gap:12px; flex-wrap:wrap;}
   .iib-nav__links{flex-wrap:wrap;}
 }
+/* =========================================================
+   LIGHT IMAGE BACKGROUND SECTION (Universities)
+   ========================================================= */
+
+.iib-light-bg{
+  position: relative;
+  background-image: var(--universities-hero-img);
+  background-size: cover;
+  background-position: center;
+}
+
+.iib-light-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(255,255,255,0.82);
+}
+
+.iib-light-bg > *{
+  position: relative;
+}
