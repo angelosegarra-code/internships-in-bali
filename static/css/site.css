@@ -26,6 +26,11 @@
   --overlay-bot: rgba(0,0,0,0.14);
 }
 
+:root{
+  --hero-img: url("../images/bali-sunrise-hero.jpg");
+  --universities-hero-img: url("../images/universities-hero.jpg");
+}
+
 body{
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
